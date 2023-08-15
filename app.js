@@ -59,6 +59,8 @@ db.collection('students').updateMany({_id:mongodb.ObjectId("64db737a5965efc6634b
 db.collection('students').deleteOne({_id:mongodb.ObjectId("64db737a5965efc6634bfe8b")},
 {$inc:{age:10}}).then((data)=>{console.log(data.modifiedCount)}).catch((error)=>{console.log(error)})
 
+db.collection('students').deleteMany({age:35}).then((data)=>{console.log(data.deletedCount)}).catch((error)=>{console.log(error)})
+
 
 })
 
